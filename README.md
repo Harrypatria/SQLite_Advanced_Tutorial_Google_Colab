@@ -32,8 +32,7 @@ This repository contains real-world examples, proven optimization techniques, an
 
 ### Option 1: Run in Google Colab (No Installation Required)
 
-[![Open In Colab]
-(https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)
 
 ### Option 2: Local Installation
 
