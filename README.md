@@ -112,14 +112,6 @@ jupyter notebook
 | Memory-Mapped I/O | Direct memory access for databases | 2-3x faster for large databases |
 | Custom Collations | Performance-optimized string comparison | 2-4x faster text operations |
 
-## 📊 Visualization Examples
-
-![Time Series Chart](https://i.imgur.com/JKGxhJm.png)
-
-![Sales Heatmap](https://i.imgur.com/L2nMmDb.png)
-
-![Geographic Analysis](https://i.imgur.com/XnZ50wy.png)
-
 ## 💡 Real-world Example: IoT Sensor Dashboard
 
 ```python
