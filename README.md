@@ -6,9 +6,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab?style=social)](https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab?style=social)](https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab/network/members)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab/blob/main/SQLite.ipynb)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
 
@@ -32,7 +31,13 @@ This repository contains real-world examples, proven optimization techniques, an
 
 ### Option 1: Run in Google Colab (No Installation Required)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)
+Each notebook can be run directly in Google Colab without any local setup:
+
+[![Open Main Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)
+
+[![Open Time Series Visualization In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fH3Cr47aQQCohORrOigvLHDb-FjXLjW6?usp=sharing)
+
+[![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)
 
 ### Option 2: Local Installation
 
@@ -51,6 +56,12 @@ pip install -r requirements.txt
 # Launch Jupyter notebook
 jupyter notebook
 ```
+
+## 📋 Notebooks Included
+
+1. **[SQLite.ipynb](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)** - Core SQLite functionality from basics to advanced techniques
+2. **[SQLite_TimeSeries_Visualization.ipynb](https://colab.research.google.com/drive/1fH3Cr47aQQCohORrOigvLHDb-FjXLjW6?usp=sharing)** - Time series data visualization with SQLite
+3. **[SQLite_Dashboard_with_Plotly_Dash.ipynb](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)** - Building interactive dashboards with SQLite and Plotly Dash
 
 ## 📋 Table of Contents
 
@@ -72,13 +83,19 @@ jupyter notebook
    - Binary Data (BLOB) Storage
    - Web & Mobile Integration
 
-4. **Real-world Applications**
+4. **Data Visualization**
+   - Time Series Analysis
+   - Geographic Visualization
+   - Interactive Dashboards
+   - Custom Reports and Charts
+
+5. **Real-world Applications**
    - Task Management Application
    - IoT Sensor Data Logger
    - Sales Analytics Dashboard
    - Connection Pooling for Multi-threaded Apps
 
-5. **Production Best Practices**
+6. **Production Best Practices**
    - Security Considerations
    - Backup & Recovery
    - Monitoring & Debugging
@@ -94,6 +111,14 @@ jupyter notebook
 | Optimized Indexes | Strategic indexing for query patterns | 10-1000x faster lookups |
 | Memory-Mapped I/O | Direct memory access for databases | 2-3x faster for large databases |
 | Custom Collations | Performance-optimized string comparison | 2-4x faster text operations |
+
+## 📊 Visualization Examples
+
+![Time Series Chart](https://i.imgur.com/JKGxhJm.png)
+
+![Sales Heatmap](https://i.imgur.com/L2nMmDb.png)
+
+![Geographic Analysis](https://i.imgur.com/XnZ50wy.png)
 
 ## 💡 Real-world Example: IoT Sensor Dashboard
 
@@ -152,7 +177,7 @@ The chart below demonstrates the impact of various optimization techniques:
 ### Web Application Integration (Flask)
 
 ```python
-from flask import Flask, g
+from flask import Flask, g, jsonify
 import sqlite3
 
 app = Flask(__name__)
@@ -174,7 +199,7 @@ def close_connection(exception):
 def get_data():
     cursor = get_db().execute('SELECT * FROM items ORDER BY timestamp DESC LIMIT 100')
     items = [dict(row) for row in cursor.fetchall()]
-    return {'items': items}
+    return jsonify({'items': items})
 ```
 
 ### Data Science Pipeline
@@ -207,6 +232,80 @@ results = pd.read_sql_query('''
 ''', conn)
 ```
 
+### Interactive Dashboard with Plotly Dash
+
+```python
+from dash import Dash, dcc, html
+from dash.dependencies import Input, Output
+import plotly.express as px
+import pandas as pd
+import sqlite3
+
+# Connect to database
+conn = sqlite3.connect('sales.db')
+
+# Load data
+df = pd.read_sql_query("""
+    SELECT date, product, category, region, sales_amount 
+    FROM sales 
+    ORDER BY date
+""", conn)
+
+# Initialize Dash app
+app = Dash(__name__)
+
+# App layout
+app.layout = html.Div([
+    html.H1("Sales Dashboard"),
+    
+    html.Div([
+        html.Div([
+            html.Label("Select Category:"),
+            dcc.Dropdown(
+                id='category-dropdown',
+                options=[{'label': c, 'value': c} for c in df['category'].unique()],
+                value=df['category'].unique()[0]
+            ),
+        ], style={'width': '30%', 'display': 'inline-block'}),
+        
+        html.Div([
+            html.Label("Select Region:"),
+            dcc.Dropdown(
+                id='region-dropdown',
+                options=[{'label': r, 'value': r} for r in df['region'].unique()],
+                value=df['region'].unique()[0]
+            ),
+        ], style={'width': '30%', 'display': 'inline-block'}),
+    ]),
+    
+    dcc.Graph(id='time-series-chart'),
+    
+    dcc.Graph(id='category-chart')
+])
+
+# Callbacks
+@app.callback(
+    Output('time-series-chart', 'figure'),
+    [Input('category-dropdown', 'value'),
+     Input('region-dropdown', 'value')]
+)
+def update_time_series(selected_category, selected_region):
+    filtered_df = df[(df['category'] == selected_category) & (df['region'] == selected_region)]
+    
+    fig = px.line(
+        filtered_df, 
+        x='date', 
+        y='sales_amount',
+        color='product',
+        title=f'Sales Trend for {selected_category} in {selected_region}'
+    )
+    
+    return fig
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+```
+
 ## 📚 Learning Path
 
 This tutorial is designed to progressively build your SQLite expertise:
@@ -216,6 +315,8 @@ This tutorial is designed to progressively build your SQLite expertise:
 3. **Day 3**: Integration with pandas and data analysis
 4. **Day 4**: Performance optimization and indexing
 5. **Day 5**: Building real-world applications
+6. **Day 6**: Data visualization and dashboards
+7. **Day 7**: Advanced applications and deployment
 
 ## 🤔 Why SQLite?
 
@@ -235,6 +336,7 @@ This tutorial is designed to progressively build your SQLite expertise:
 - **Web Development**: Small to medium websites and prototyping
 - **Data Science**: Data cleaning, transformation, and analysis
 - **Testing**: Isolated test databases that require no setup
+- **Data Visualization**: Interactive dashboards and reports
 
 ## 🛠️ Troubleshooting Common Issues
 
@@ -283,6 +385,70 @@ conn.execute('COMMIT')
 ```
 </details>
 
+<details>
+<summary><b>Memory Management for Large Queries</b></summary>
+
+When working with large result sets:
+
+```python
+# Solution 1: Use iterators instead of fetchall()
+cursor = conn.execute("SELECT * FROM large_table")
+for row in cursor:  # Process one row at a time
+    process_row(row)
+
+# Solution 2: Chunk your queries
+def process_in_chunks(table, chunk_size=10000):
+    offset = 0
+    while True:
+        query = f"SELECT * FROM {table} LIMIT {chunk_size} OFFSET {offset}"
+        chunk = pd.read_sql_query(query, conn)
+        
+        if chunk.empty:
+            break
+            
+        # Process chunk
+        process_data(chunk)
+        
+        offset += chunk_size
+```
+</details>
+
+<details>
+<summary><b>Database Corruption Recovery</b></summary>
+
+If you suspect database corruption:
+
+```python
+# Solution 1: Check database integrity
+conn.execute("PRAGMA integrity_check")
+
+# Solution 2: Create a recovery copy
+import os
+import sqlite3
+
+def recover_sqlite_db(corrupt_db_path, recovered_db_path):
+    """Attempt to recover a corrupted SQLite database"""
+    if os.path.exists(recovered_db_path):
+        os.remove(recovered_db_path)
+        
+    # Create a new empty database
+    new_conn = sqlite3.connect(recovered_db_path)
+    new_conn.close()
+    
+    # Use SQLite's recovery shell commands
+    os.system(f"echo .dump | sqlite3 {corrupt_db_path} | sqlite3 {recovered_db_path}")
+    
+    # Verify the recovery worked
+    try:
+        test_conn = sqlite3.connect(recovered_db_path)
+        test_conn.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        test_conn.close()
+        return True
+    except:
+        return False
+```
+</details>
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
@@ -299,8 +465,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Harry Patria 
-https://www.linkedin.com/in/harry-patria/
+Harry Patria  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harry-patria/)
 
 Project Link: [https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab](https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab)
 
