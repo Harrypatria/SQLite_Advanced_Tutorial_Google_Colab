@@ -460,8 +460,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Harry Patria  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harry-patria/)
 
-Project Link: [https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab](https://github.com/Harrypatria/SQLite_Advanced_Tutorial_Google_Colab)
-
 ---
 
 <div align="center">
