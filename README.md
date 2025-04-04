@@ -97,6 +97,7 @@ jupyter notebook
    - IoT Sensor Data Logger
    - Sales Analytics Dashboard
    - Connection Pooling for Multi-threaded Apps
+   - Geographic Visualization using Folium
 
 6. **Production Best Practices**
    - Security Considerations
