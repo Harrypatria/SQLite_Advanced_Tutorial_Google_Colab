@@ -39,6 +39,9 @@ Each notebook can be run directly in Google Colab without any local setup:
 
 [![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)
 
+[![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing)
+
+
 ### Option 2: Local Installation
 
 ```bash
