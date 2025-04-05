@@ -39,8 +39,7 @@ Each notebook can be run directly in Google Colab without any local setup:
 
 [![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)
 
-[![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing)
-
+[![Open Geographic Visualization In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing)
 
 ### Option 2: Local Installation
 
@@ -65,6 +64,7 @@ jupyter notebook
 1. **[SQLite.ipynb](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)** - Core SQLite functionality from basics to advanced techniques
 2. **[SQLite_TimeSeries_Visualization.ipynb](https://colab.research.google.com/drive/1fH3Cr47aQQCohORrOigvLHDb-FjXLjW6?usp=sharing)** - Time series data visualization with SQLite
 3. **[SQLite_Dashboard_with_Plotly_Dash.ipynb](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)** - Building interactive dashboards with SQLite and Plotly Dash
+4. **[SQLite_Geographic_Visualization.ipynb](https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing)** - Geographic data visualization using SQLite and Folium
 
 ## 📋 Table of Contents
 
