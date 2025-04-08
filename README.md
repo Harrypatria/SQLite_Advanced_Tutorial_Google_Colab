@@ -100,6 +100,7 @@ jupyter notebook
    - Sales Analytics Dashboard
    - Connection Pooling for Multi-threaded Apps
    - Geographic Visualization using Folium
+   - Healthcare Analytics
 
 6. **Production Best Practices**
    - Security Considerations
