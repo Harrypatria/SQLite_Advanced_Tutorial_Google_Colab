@@ -32,17 +32,23 @@ This repository contains real-world examples, proven optimization techniques, an
 
 ### Option 1: Run in Google Colab (No Installation Required)
 
-Each notebook can be run directly in Google Colab without any local setup:
-
-[![Open Main Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing)
-
-[![Open Time Series Visualization In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fH3Cr47aQQCohORrOigvLHDb-FjXLjW6?usp=sharing)
-
-[![Open Dashboard Tutorial In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing)
-
-[![Open Geographic Visualization In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing)
-
-[![Open Geographic Visualization In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11xUZmmVxSSU2saEEllmq8U_9J5bI-jq_?usp=sharing)
+<p align="center" style="display: flex; justify-content: center; gap: 10px;">
+  <a href="https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Main Tutorial In Colab" />
+  </a>
+  <a href="https://colab.research.google.com/drive/1fH3Cr47aQQCohORrOigvLHDb-FjXLjW6?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Time Series Visualization In Colab" />
+  </a>
+  <a href="https://colab.research.google.com/drive/1_MIxE1voCeeIq_ho2vUL1tSyIC-dBdfa?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Dashboard Tutorial In Colab" />
+  </a>
+  <a href="https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Geographic Visualization In Colab" />
+  </a>
+  <a href="https://colab.research.google.com/drive/11xUZmmVxSSU2saEEllmq8U_9J5bI-jq_?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Geographic Visualization In Colab" />
+  </a>
+</p>
 
 ### Option 2: Local Installation
 
