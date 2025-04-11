@@ -26,7 +26,7 @@ This repository contains real-world examples, proven optimization techniques, an
 - **🧪 Interactive Notebooks**: Run all examples directly in Google Colab
 - **📱 Mobile & Embedded**: Techniques for resource-constrained environments
 - **🛡️ Production-ready Code**: Industry best practices for error handling, security, and robustness
-- **🧪 **Healthcare Analytics**: Patient Monitoring System for tracking patient vital signs and clinical outcomes.
+- **🧪 Healthcare Analytics**: Patient Monitoring System for tracking patient vital signs and clinical outcomes.
 
 ## 🚀 Quick Start
 
