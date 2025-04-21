@@ -32,7 +32,7 @@ This repository contains real-world examples, proven optimization techniques, an
 
 ### Option 1: Run in Google Colab (No Installation Required)
 
-<p align="center" style="display: flex; justify-content: center; gap: 10px;">
+<p align="left" style="display: flex; justify-content: center; gap: 10px;">
   <a href="https://colab.research.google.com/drive/1sbuG_dWd465P7FrDGj4qZRsCfvkefgWI?usp=sharing" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Main Tutorial In Colab" />
   </a>
