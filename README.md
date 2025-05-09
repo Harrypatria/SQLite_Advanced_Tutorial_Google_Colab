@@ -49,7 +49,12 @@ This repository contains real-world examples, proven optimization techniques, an
     <a href="https://colab.research.google.com/drive/1hnRixvVlO32yH9vTLtE_4FnXRNdI-ElS?usp=sharing" target="_blank">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Biological Networks In Colab" />
   </a>
+    </a>
+    <a href="https://colab.research.google.com/drive/1IWWaEuaMXAwk5L6GymM8V5msaYEeWOt-?usp=sharing" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Biological Networks In Colab" />
+  </a>
 </p>
+
 
 ### Option 2: Local Installation
 
