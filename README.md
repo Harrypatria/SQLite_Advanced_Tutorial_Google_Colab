@@ -55,7 +55,6 @@ This repository contains real-world examples, proven optimization techniques, an
   </a>
 </p>
 
-
 ### Option 2: Local Installation
 
 ```bash
