@@ -1,4 +1,4 @@
-# 🗄️ SQLite Advanced Tutorial
+# 🗄️ SQLite Advanced Tutorial by Patria & Co.
 
 <div align="center">
   
