@@ -445,6 +445,13 @@ def recover_sqlite_db(corrupt_db_path, recovered_db_path):
 ```
 </details>
 
+## 🌟 Star History
+
+If this project has helped you on your Python journey, please consider giving it a star! ⭐
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Harrypatria/SQLite_Advanced_Tutorial_Google_Colab&type=Date)](https://star-history.com/#Harrypatria/SQLite_Advanced_Tutorial_Google_Colab&Date)
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
